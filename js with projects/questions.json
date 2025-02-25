@@ -1,0 +1,404 @@
+{
+  "questions": [
+      {
+          "question": "What is the capital city of Morocco?",
+          "options": [
+              "Casablanca",
+              "Rabat",
+              "Marrakech",
+              "Fes"
+          ],
+          "answer": "Rabat"
+      },
+      {
+          "question": "Which mountain range is located in Morocco?",
+          "options": [
+              "The Alps",
+              "The Atlas Mountains",
+              "The Rocky Mountains",
+              "The Himalayas"
+          ],
+          "answer": "The Atlas Mountains"
+      },
+      {
+          "question": "What is the official language of Morocco?",
+          "options": [
+              "French",
+              "Arabic",
+              "Berber",
+              "Spanish"
+          ],
+          "answer": "Arabic"
+      },
+      {
+          "question": "Which famous desert is partially located in Morocco?",
+          "options": [
+              "Sahara Desert",
+              "Gobi Desert",
+              "Kalahari Desert",
+              "Mojave Desert"
+          ],
+          "answer": "Sahara Desert"
+      },
+      {
+          "question": "What is the currency of Morocco?",
+          "options": [
+              "Euro",
+              "Dinar",
+              "Dirham",
+              "Pound"
+          ],
+          "answer": "Dirham"
+      },
+      {
+          "question": "Which city is known for its historic medina and souks?",
+          "options": [
+              "Casablanca",
+              "Tangier",
+              "Marrakech",
+              "Agadir"
+          ],
+          "answer": "Marrakech"
+      },
+      {
+          "question": "What is the traditional Moroccan tea called?",
+          "options": [
+              "Chai",
+              "Matcha",
+              "Mint Tea",
+              "Rooibos"
+          ],
+          "answer": "Mint Tea"
+      },
+      {
+          "question": "Which ocean borders Morocco to the west?",
+          "options": [
+              "Indian Ocean",
+              "Pacific Ocean",
+              "Atlantic Ocean",
+              "Mediterranean Sea"
+          ],
+          "answer": "Atlantic Ocean"
+      },
+      {
+          "question": "What is the name of the famous square in Marrakech?",
+          "options": [
+              "Times Square",
+              "Jemaa el-Fnaa",
+              "Tahrir Square",
+              "Plaza Mayor"
+          ],
+          "answer": "Jemaa el-Fnaa"
+      },
+      {
+          "question": "Which year did Morocco gain independence from France?",
+          "options": [
+              "1945",
+              "1956",
+              "1962",
+              "1970"
+          ],
+          "answer": "1956"
+      },
+      {
+          "question": "What is the traditional Moroccan dish made of couscous, vegetables, and meat?",
+          "options": [
+              "Tajine",
+              "Couscous",
+              "Harira",
+              "Pastilla"
+          ],
+          "answer": "Couscous"
+      },
+      {
+          "question": "Which famous strait separates Morocco from Spain?",
+          "options": [
+              "Strait of Gibraltar",
+              "Bosphorus Strait",
+              "Strait of Malacca",
+              "Strait of Hormuz"
+          ],
+          "answer": "Strait of Gibraltar"
+      },
+      {
+          "question": "What is the name of the traditional Moroccan hat?",
+          "options": [
+              "Fez",
+              "Turban",
+              "Kufi",
+              "Beret"
+          ],
+          "answer": "Fez"
+      },
+      {
+          "question": "Which famous film was partially shot in Casablanca?",
+          "options": [
+              "Lawrence of Arabia",
+              "Casablanca",
+              "The Mummy",
+              "Gladiator"
+          ],
+          "answer": "Casablanca"
+      },
+      {
+          "question": "What is the name of the traditional Moroccan leather tanneries found in Fes?",
+          "options": [
+              "Souks",
+              "Medinas",
+              "Tanneries",
+              "Riads"
+          ],
+          "answer": "Tanneries"
+      },
+      {
+          "question": "Which dynasty established Marrakech as its capital in the 11th century?",
+          "options": [
+              "Almoravid Dynasty",
+              "Saadi Dynasty",
+              "Alaouite Dynasty",
+              "Idrisid Dynasty"
+          ],
+          "answer": "Almoravid Dynasty"
+      },
+      {
+          "question": "What is the name of the traditional Moroccan stew cooked in a clay pot?",
+          "options": [
+              "Harira",
+              "Tajine",
+              "Couscous",
+              "Pastilla"
+          ],
+          "answer": "Tajine"
+      },
+      {
+          "question": "Which Moroccan city is known as the 'Blue City'?",
+          "options": [
+              "Chefchaouen",
+              "Casablanca",
+              "Tangier",
+              "Essaouira"
+          ],
+          "answer": "Chefchaouen"
+      },
+      {
+          "question": "What is the name of the traditional Moroccan soup often served during Ramadan?",
+          "options": [
+              "Harira",
+              "Bissara",
+              "Chorba",
+              "Rfissa"
+          ],
+          "answer": "Harira"
+      },
+      {
+          "question": "Which Moroccan city is home to the Hassan II Mosque, one of the largest mosques in the world?",
+          "options": [
+              "Rabat",
+              "Casablanca",
+              "Fes",
+              "Marrakech"
+          ],
+          "answer": "Casablanca"
+      },
+      {
+          "question": "What is the name of the traditional Moroccan pastry filled with meat and almonds?",
+          "options": [
+              "Briouat",
+              "Pastilla",
+              "Kaab el Ghazal",
+              "Sellou"
+          ],
+          "answer": "Pastilla"
+      },
+      {
+          "question": "Which Moroccan port city is a gateway to Europe and the Mediterranean?",
+          "options": [
+              "Agadir",
+              "Tangier",
+              "Essaouira",
+              "Safi"
+          ],
+          "answer": "Tangier"
+      },
+      {
+          "question": "What is the name of the traditional Moroccan bread?",
+          "options": [
+              "Pita",
+              "Khobz",
+              "Baguette",
+              "Naan"
+          ],
+          "answer": "Khobz"
+      },
+      {
+          "question": "Which Moroccan city is famous for its annual film festival?",
+          "options": [
+              "Marrakech",
+              "Casablanca",
+              "Fes",
+              "Ouarzazate"
+          ],
+          "answer": "Marrakech"
+      },
+      {
+          "question": "What is the name of the traditional Moroccan musical style often performed at celebrations?",
+          "options": [
+              "Rai",
+              "Gnawa",
+              "Chaabi",
+              "Andalusian"
+          ],
+          "answer": "Gnawa"
+      },
+      {
+          "question": "Which Moroccan city is known as the 'Windy City of Africa'?",
+          "options": [
+              "Essaouira",
+              "Agadir",
+              "Casablanca",
+              "Tangier"
+          ],
+          "answer": "Essaouira"
+      },
+      {
+          "question": "What is the name of the traditional Moroccan dessert made with sesame seeds and honey?",
+          "options": [
+              "Sellou",
+              "Chebakia",
+              "Kaab el Ghazal",
+              "Briouat"
+          ],
+          "answer": "Chebakia"
+      },
+      {
+          "question": "Which Moroccan city is known for its Roman ruins, including Volubilis?",
+          "options": [
+              "Meknes",
+              "Fes",
+              "Rabat",
+              "Casablanca"
+          ],
+          "answer": "Meknes"
+      },
+      {
+          "question": "What is the name of the traditional Moroccan wedding ceremony?",
+          "options": [
+              "Henna Night",
+              "Zaffa",
+              "Aqiqah",
+              "Eid al-Fitr"
+          ],
+          "answer": "Henna Night"
+      },
+      {
+          "question": "Which Moroccan city is known as the 'Hollywood of Africa' due to its film studios?",
+          "options": [
+              "Ouarzazate",
+              "Marrakech",
+              "Casablanca",
+              "Fes"
+          ],
+          "answer": "Ouarzazate"
+      },
+      {
+          "question": "What is the name of the traditional Moroccan fermented butter used in cooking?",
+          "options": [
+              "Argan Oil",
+              "Smen",
+              "Ghee",
+              "Olive Oil"
+          ],
+          "answer": "Smen"
+      },
+      {
+          "question": "Which Moroccan city is famous for its blue-painted streets and buildings?",
+          "options": [
+              "Chefchaouen",
+              "Tangier",
+              "Essaouira",
+              "Agadir"
+          ],
+          "answer": "Chefchaouen"
+      },
+      {
+          "question": "What is the name of the traditional Moroccan headscarf worn by men?",
+          "options": [
+              "Turban",
+              "Keffiyeh",
+              "Tagelmust",
+              "Shawl"
+          ],
+          "answer": "Tagelmust"
+      },
+      {
+          "question": "Which Moroccan city is known for its historic university, Al Quaraouiyine?",
+          "options": [
+              "Fes",
+              "Marrakech",
+              "Rabat",
+              "Casablanca"
+          ],
+          "answer": "Fes"
+      },
+      {
+          "question": "What is the name of the traditional Moroccan almond cookie?",
+          "options": [
+              "Kaab el Ghazal",
+              "Chebakia",
+              "Sellou",
+              "Briouat"
+          ],
+          "answer": "Kaab el Ghazal"
+      },
+      {
+          "question": "Which Moroccan city is known for its annual Gnawa World Music Festival?",
+          "options": [
+              "Essaouira",
+              "Marrakech",
+              "Fes",
+              "Agadir"
+          ],
+          "answer": "Essaouira"
+      },
+      {
+          "question": "What is the name of the traditional Moroccan clay water vessel?",
+          "options": [
+              "Amphora",
+              "Zellij",
+              "Tagine",
+              "Ghorba"
+          ],
+          "answer": "Ghorba"
+      },
+      {
+          "question": "Which Moroccan city is known for its historic Jewish quarter, the Mellah?",
+          "options": [
+              "Fes",
+              "Marrakech",
+              "Casablanca",
+              "Tangier"
+          ],
+          "answer": "Fes"
+      },
+      {
+          "question": "What is the name of the traditional Moroccan handwoven rug?",
+          "options": [
+              "Kilim",
+              "Berber Rug",
+              "Persian Rug",
+              "Dhurrie"
+          ],
+          "answer": "Berber Rug"
+      },
+      {
+          "question": "Which Moroccan city is known for its annual Rose Festival?",
+          "options": [
+              "Ouarzazate",
+              "El Kelaa des M'Gouna",
+              "Marrakech",
+              "Agadir"
+          ],
+          "answer": "El Kelaa des M'Gouna"
+      }
+  ]
+}
