@@ -1,0 +1,142 @@
+:root {
+  --primary: #00ff41;
+  --primary-dark: #008f11;
+  --bg: #0d0208;
+  --bg-light: #0a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+#container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  color: var(--primary);
+  text-shadow: 0 0 5px var(--primary);
+  background: radial-gradient(ellipse at bottom, var(--bg-light) 0%, var(--bg) 70%);
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  border-bottom: 2px solid var(--primary-dark);
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+#joke-container {
+  min-height: 200px;
+  width: 100%;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid var(--primary-dark);
+  border-radius: 4px;
+  background-color: rgba(0, 255, 65, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#joke-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  animation: scanline 3s linear infinite;
+}
+
+@keyframes scanline {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(200px); }
+}
+
+#joke-container p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-align: center;
+  padding: 1rem;
+}
+
+#loadJokeBtn {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#loadJokeBtn:hover {
+  background-color: rgba(0, 255, 65, 0.1);
+  box-shadow: 0 0 10px var(--primary);
+}
+
+#loadJokeBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.4), transparent);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+#loadJokeBtn:hover::before {
+  left: 100%;
+}
+
+#chuckImg {
+  max-width: 300px;
+  width: 100%;
+  margin-top: auto;
+  filter: drop-shadow(0 0 10px var(--primary));
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  #joke-container p {
+    font-size: 1.2rem;
+  }
+  
+  #loadJokeBtn {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+  
+  #chuckImg {
+    max-width: 200px;
+  }
+}

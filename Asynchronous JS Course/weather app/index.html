@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morocco Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        .weather-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            padding: 25px;
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+        }
+        
+        .search {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        #city-input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        #search-btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        
+        .city-name {
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .date {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        
+        .weather-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .temperature {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .description {
+            color: #666;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+        
+        .details {
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+        
+        .detail-item {
+            text-align: center;
+        }
+        
+        .detail-item h4 {
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        
+        .detail-item p {
+            font-weight: bold;
+        }
+        
+        .error {
+            color: red;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-card">
+        <div class="search">
+            <input type="text" id="city-input" placeholder="Enter city in Morocco...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        
+        <h1 class="city-name">Casablanca</h1>
+        <p class="date" id="date">Loading date...</p>
+        
+        <div class="weather-icon" id="weather-icon"></div>
+        
+        <div class="temperature" id="temp">--°C</div>
+        <p class="description" id="description">--</p>
+        
+        <div class="details">
+            <div class="detail-item">
+                <h4>High</h4>
+                <p id="high-temp">--°</p>
+            </div>
+            <div class="detail-item">
+                <h4>Low</h4>
+                <p id="low-temp">--°</p>
+            </div>
+            <div class="detail-item">
+                <h4>Humidity</h4>
+                <p id="humidity">--%</p>
+            </div>
+        </div>
+        
+        <div class="error" id="error"></div>
+    </div>
+
+    <script>
+        const apiKey = 'efd91ade31f4912760949ef00b382ba6';
+        
+        // Default to Casablanca on load
+        window.onload = function() {
+            updateDate();
+            getWeather('Casablanca');
+        };
+        
+        // Search functionality
+        document.getElementById('search-btn').addEventListener('click', searchWeather);
+        document.getElementById('city-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') searchWeather();
+        });
+        
+        function searchWeather() {
+            const city = document.getElementById('city-input').value.trim();
+            if (city) {
+                getWeather(city);
+            }
+        }
+        
+        function getWeather(city) {
+            document.getElementById('error').textContent = '';
+            
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('City not found');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Verify the city is in Morocco by checking country code
+                    if (data.sys.country === 'MA') {
+                        displayWeather(data);
+                    } else {
+                        throw new Error('Please enter a city in Morocco');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('error').textContent = error.message;
+                });
+        }
+        
+        function displayWeather(data) {
+            document.querySelector('.city-name').textContent = data.name;
+            document.getElementById('temp').textContent = `${Math.round(data.main.temp)}°C`;
+            document.getElementById('description').textContent = data.weather[0].description;
+            document.getElementById('high-temp').textContent = `${Math.round(data.main.temp_max)}°`;
+            document.getElementById('low-temp').textContent = `${Math.round(data.main.temp_min)}°`;
+            document.getElementById('humidity').textContent = `${data.main.humidity}%`;
+            
+            const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+            document.getElementById('weather-icon').style.backgroundImage = `url(${iconUrl})`;
+        }
+        
+        function updateDate() {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const today = new Date();
+            document.getElementById('date').textContent = today.toLocaleDateString('en-US', options);
+        }
+    </script>
+</body>
+</html>
